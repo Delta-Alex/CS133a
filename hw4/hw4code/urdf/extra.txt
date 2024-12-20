@@ -1,0 +1,28 @@
+  <!-- Shift 2 and Joint 3-->
+  <joint name="theta3" type="continuous">
+    <parent link="frame2"/>
+    <child  link="frame3"/>
+    <origin xyz="0.4 0 0" rpy="0 0 0"/>
+    <axis   xyz="0 0 -1"/>
+  </joint>
+
+  <link name="frame3">
+  </link>
+
+  <!-- Shift 3 and Joint 4-->
+  <joint name="theta4" type="continuous">
+    <parent link="frame3"/>
+    <child  link="frame4"/>
+    <origin xyz="0 0 -0.4" rpy="0 0 0"/>
+    <axis   xyz="0 1 0"/>
+  </joint>
+
+  <link name="frame4">
+  </link>
+
+   <!-- Shift 4 -->
+   <joint name="shift4" type="fixed">
+    <parent link="frame4"/>
+    <child  link="tip"/>
+    <origin xyz="0 0.4 0" rpy="0 0 0"/>
+  </joint>
